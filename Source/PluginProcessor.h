@@ -61,6 +61,7 @@ public:
     juce::AudioProcessorValueTreeState apvts{*this,nullptr,"Parameters",createParameterLayout()};
 
 private:
+    using Filter = juce::dsp::IIR::Filter<float>;   //defining aliases
     //==============================================================================
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (NewProjectAudioProcessor)
 };
